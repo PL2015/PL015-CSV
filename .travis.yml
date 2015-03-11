@@ -10,8 +10,6 @@ node_js:
 
 before_script:
   - ls -la
-  
-  - npm install
 
   - export DISPLAY=:99.0
 

@@ -2,6 +2,7 @@ var gulp    = require('gulp'),
     gutil   = require('gulp-util'),
     uglify  = require('gulp-uglify'),
     concat  = require('gulp-concat');
+    shell   = require('gulp-shell');
 var del     = require('del');
 var minifyHTML = require('gulp-minify-html');
 var minifyCSS  = require('gulp-minify-css');
@@ -37,6 +38,23 @@ gulp.task('test', function() {
       // Make sure failed tests cause gulp to exit non-zero
       throw err;
     });
+});
+
+gulp.task('macTest', function() {
+  gulp.src('')
+    .pipe(shell([
+      'open test.html',
+      'ls -la',
+      'echo FinalizadoTest'
+    ]));
+});
+
+gulp.task('macShow', function() {
+  gulp.src('')
+    .pipe(shell([
+      'open index.html',
+      'echo Finalizada visualizacion'
+    ]));
 });
 
 gulp.task('default', function() {
