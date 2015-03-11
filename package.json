@@ -27,7 +27,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "open test.html"
+    "test": "./node_modules/karma/bin/karma start --single-run --browsers Firefox my.conf.js",
+    "karma": "./node_modules/karma/bin/karma start my.conf.js"
   },
   "repository": {
     "type": "git",
