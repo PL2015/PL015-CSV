@@ -6,6 +6,8 @@ var del     = require('del');
 var minifyHTML = require('gulp-minify-html');
 var minifyCSS  = require('gulp-minify-css');
 
+var karma   = require('gulp-karma');
+
 gulp.task('minify', function () {
   gulp.src('./scripts/csv.js')
   .pipe(uglify())
@@ -22,4 +24,25 @@ gulp.task('minify', function () {
 
 gulp.task('clean', function(cb) {
   del(['minified/*'], cb);
+});
+
+gulp.task('test', function() {
+  // Be sure to return the stream
+  return gulp.src([])
+    .pipe(karma({
+      configFile: 'my.conf.js',
+      action: 'run'
+    }))
+    .on('error', function(err) {
+      // Make sure failed tests cause gulp to exit non-zero
+      throw err;
+    });
+});
+
+gulp.task('default', function() {
+  gulp.src([])
+    .pipe(karma({
+      configFile: 'my.conf.js',
+      action: 'watch'
+    }));
 });
