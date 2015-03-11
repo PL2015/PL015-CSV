@@ -1,0 +1,28 @@
+{
+  "name": "PL015-CSV",
+  "version": "0.0.1",
+  "description": "CSV checking",
+  "main": "scripts/csv.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "open tests/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PL2015/PL015-CSV.git"
+  },
+  "keywords": [
+    "comma",
+    "separated",
+    "value",
+    "csv"
+  ],
+  "author": "Guillermo Rodriguez Pardo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PL2015/PL015-CSV/issues"
+  },
+  "homepage": "https://github.com/PL2015/PL015-CSV"
+}
