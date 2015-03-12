@@ -6,7 +6,7 @@ suite('CSV - Creando las tablas ...', function() {
     
         if (typeof __html__ !== 'undefined') {
             document.body.innerHTML = __html__['test.html'];
-            original = document.getElementById("original");
+            original = document.getElementById('original');
         }
         
     });
@@ -18,7 +18,7 @@ suite('CSV - Creando las tablas ...', function() {
         result = document.getElementById('result');
         
         assert.deepEqual(result.innerHTML
-                        , '\n<tbody><tr> <td>1</td> </tr>\n</tbody>'
+                        , '<tbody><tr class=""><td>1</td></tr></tbody>'
                         , 'Elemento unico.');
         
         original.value = '1, 2';
@@ -27,7 +27,7 @@ suite('CSV - Creando las tablas ...', function() {
         result = document.getElementById('result');
         
         assert.deepEqual(result.innerHTML
-                        , '\n<tbody><tr> <td>1</td>  <td> 2</td> </tr>\n</tbody>'
+                        , '<tbody><tr class=""><td>1</td><td> 2</td></tr></tbody>'
                         , 'Dos elementos.');
         
     });
@@ -40,7 +40,7 @@ suite('CSV - Creando las tablas ...', function() {
         result = document.getElementById('result');
         
         assert.deepEqual(result.innerHTML
-                        , '\n<tbody><tr> <td>1</td> </tr>\n<tr> <td>2</td> </tr>\n</tbody>'
+                        , '<tbody><tr class=""><td>1</td></tr><tr class=""><td>2</td></tr></tbody>'
                         , 'Elemento unico.');
         
         original.value = '1, 2\n3, 4';
@@ -49,7 +49,7 @@ suite('CSV - Creando las tablas ...', function() {
         result = document.getElementById('result');
         
         assert.deepEqual(result.innerHTML
-                        , '\n<tbody><tr> <td>1</td>  <td> 2</td> </tr>\n<tr> <td>3</td>  <td> 4</td> </tr>\n</tbody>'
+                        , '<tbody><tr class=""><td>1</td><td> 2</td></tr><tr class=""><td>3</td><td> 4</td></tr></tbody>'
                         , 'Dos elementos.');
     });
 });
@@ -90,7 +90,7 @@ suite('CSV - Comprobando deteccion de errores ...', function() {
         result = document.getElementById('result');
         
         assert.deepEqual(result.innerHTML
-                        , '\n'
+                        , ''
                         , 'Error - Sin texto');
     });
     
@@ -101,7 +101,7 @@ suite('CSV - Comprobando deteccion de errores ...', function() {
         result = document.getElementById('result');
         
         assert.deepEqual(result.innerHTML
-                        , '\n<tbody><tr> <td>1</td>  <td>2</td> </tr>\n<tr class="error"> <td>1</td> </tr>\n</tbody>'
+                        , '<tbody><tr class=""><td>1</td><td>2</td></tr><tr class="error"><td>1</td></tr></tbody>'
                         , 'Error - numero erroneo de entradas');
     });
 });
