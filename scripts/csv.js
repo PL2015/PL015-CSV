@@ -1,4 +1,3 @@
-// See http://en.wikipedia.org/wiki/Comma-separated_values
 "use strict"; // Use ECMAScript 5 strict mode in browsers that support it
 $(document).ready(function() {
     $("button").click(function() {
@@ -14,6 +13,7 @@ function calculate() {
     var lines = temp.split(/\n+\s*/);
     var commonLength = NaN;
     var r = [];
+    var errText = "";
     
     // Template using underscore
     var row = "<% _.each(items, function(name) { %>" +
@@ -27,8 +27,8 @@ function calculate() {
         var result = [];
         var error = false;
         if (m) {
-            if (commonLength && (commonLength != m.length)) {
-                //alert('ERROR! row <'+temp+'> has '+m.length+' items!');
+            if (commonLength && (commonLength != m.length) && (errText == "")) {
+                errText = 'ERROR! row <' + temp + '> has ' + m.length + ' items!';
                 error = true;
             } else {
                 commonLength = m.length;
@@ -44,18 +44,19 @@ function calculate() {
             var tr = error? '<tr class="error">' : '<tr>';
             r.push(tr+_.template(row, {items : result})+"</tr>");
         } else {
-            alert('ERROR! row '+temp+' does not look as legal CSV');
+            errText = 'ERROR! row ' + temp + ' does not look as legal CSV';
             error = true;
         }
     }
     r.unshift('<p>\n<table class="center" id="result">');
     r.push('</table>');
-    //alert(r.join('\n')); // debug
+    if (errText != "") {
+        r.push('' + errText + '');
+    }
     finaltable.innerHTML = r.join('\n');
+    errText = "";
 }
 
-// <script type="text/javascript" src="lib/underscore-min.js"></script>
-// <script src="lib/jquery-1.11.1.min.js"></script>
 
 window.onload = function() {
     // If the browser supports localStorage and we have some stored data
