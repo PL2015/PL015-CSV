@@ -1,4 +1,13 @@
 {
+  "dependencies": {
+    "jquery": "*",
+    "underscore": "*",
+    "express": "*",
+    "ejs": "*",
+    "body-parser": "~1.12.0",
+    "express-ejs-layouts": "~1.1.0"
+  },
+
   "devDependencies": {
     "blanket": "^1.1.6",
     "chai": "^2.1.0",
@@ -17,7 +26,8 @@
     "karma-html2js-preprocessor": "*",
     "karma-chrome-launcher": "*",
     "karma-firefox-launcher": "*",
-    "karma-phantomjs-launcher": "*"
+    "karma-phantomjs-launcher": "*",
+    "node-static": "^0.7.6"
   },
 
   "name": "PL015-CSV",
