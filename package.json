@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "0.10.x"
+  },
   "dependencies": {
     "jquery": "*",
     "underscore": "*",
@@ -55,5 +58,6 @@
   "bugs": {
     "url": "https://github.com/PL2015/PL015-CSV/issues"
   },
+  
   "homepage": "https://github.com/PL2015/PL015-CSV"
 }
