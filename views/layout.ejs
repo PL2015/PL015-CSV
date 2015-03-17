@@ -10,13 +10,13 @@
         <script type="text/html" id="resultTemplate"> 
                 <p>
                 <table class="center" id="result">
-                    <% _.each(rows, function(row) { %>
-                    <tr class="<%=row.type%>">
-                        <% _.each(row.items, function(name) { %>
-                            <td><%= name %></td>
-                        <% }); %>
+                    {{ _.each(rows, function(row) { }}
+                    <tr class="{{=row.type}}">
+                        {{ _.each(row.items, function(name) { }}
+                            <td>{{= name }}</td>
+                        {{ }); }}
                     </tr>
-                    <% }); %>
+                    {{ }); }}
                 </table>
                 </p>
  

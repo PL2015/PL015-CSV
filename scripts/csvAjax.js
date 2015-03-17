@@ -1,20 +1,12 @@
 "use strict"; // Use ECMAScript 5 strict mode in browsers that support it
 $(document).ready(function() {
-
-_.templateSettings = {
-    evaluate    : /\{\{([\s\S]+?)\}\}/g,
-    interpolate : /\{\{=([\s\S]+?)\}\}/g,
-    escape      : /\{\{-([\s\S]+?)\}\}/g
-};
-
     $("button").click(function() {
         //calculate();
 
 
        var original = document.getElementById("original");
        var temp = original.value;
-       var linesI = temp.split(/\n+\s*/);
-       var lines = JSON.stringify(linesI);
+       var lines = temp.split(/\n+\s*/);
 
        if (window.localStorage) localStorage.original = temp;
 
@@ -22,7 +14,6 @@ _.templateSettings = {
        $.ajax({
           url: '/ajaxEx/'+ lines +'/',
           type: 'GET',
-          dataType: 'JSON',
           success: function (data) {
              alert("sfsf");
              $('body').append(data);
@@ -46,7 +37,7 @@ function render(rows){
 
 var resultTemplate = document.getElementById("resultTemplate").innerHTML;
 
-    $('#finaltable').html( _.template(resultTemplate, { rows: rows }));
+    $('#finaltable').innerHTML = _.template(resultTemplate, { rows: rows });
    /* if (errText != "") {
         finaltable.innerHTML += '' + errText + '';
     }*/
