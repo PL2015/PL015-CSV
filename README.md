@@ -1,7 +1,7 @@
 Practica 2: CSV [![Build Status](https://travis-ci.org/PL2015/PL015-CSV.svg?branch=gh-pages)](https://travis-ci.org/PL2015/PL015-CSV)
 ===============
 
-## Descripcion
+## Descripción
 
 Comprobación web de un texto con formato CSV y convertirlo a una tabla.
 Se toma como entrada un texto plano en formato CSV y la web lo transforma en un objeto tabla de html. 
@@ -25,7 +25,7 @@ En la rama develop se encuentra el proyecto con el uso de ajax
 
 * Otras:
 
-    Página del despliegue en Travis-CI del proyecto [aqui](https://travis-ci.org/PL2015/PL015-CSV)
+    Página del despliegue en Travis-CI del proyecto [aquí](https://travis-ci.org/PL2015/PL015-CSV)
 
 ## Autores
 
