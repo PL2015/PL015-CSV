@@ -1,13 +1,4 @@
 var _ = require('underscore');
-
-_.templateSettings = {
-    evaluate    : /\{\{([\s\S]+?)\}\}/g,
-    interpolate : /\{\{=([\s\S]+?)\}\}/g,
-    escape      : /\{\{-([\s\S]+?)\}\}/g
-};
-
-
-
 var $ = require('jquery');
 var express = require('express');
 
@@ -25,7 +16,7 @@ app.use(expressLayouts);
 app.use(express.static(__dirname + '/'));
 
 app.get('/', function (request, response) {
-   response.render('index', { title: 'Hola' });
+   response.render('index', { title: 'CSV' });
 });
 
 app.listen(app.get('port'), function () {
@@ -33,9 +24,11 @@ app.listen(app.get('port'), function () {
 });
 
 app.get('/ajaxEx/:cad', function (request, response) {
-
    
    response.send(JSON.stringify(csv.calculate(request.params.cad)));
 
+});
 
+app.get('/test/', function (request, response) {
+   response.render('test', { title: 'CSV test' });
 });
