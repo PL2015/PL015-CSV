@@ -12,7 +12,7 @@ Se toma como entrada un texto plano en formato CSV y la web lo transforma en un 
 
     Acceda a la página del proyecto [aquí](https://pl2015.github.io/PL015-CSV/)
 
-    Y a la p‡gina de las pruebas [aqu’](https://pl2015.github.io/PL015-CSV/test.html)
+    Y a la página de las pruebas [aquí](https://pl2015.github.io/PL015-CSV/test.html)
 
 * Heroku:
 
