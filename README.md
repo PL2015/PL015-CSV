@@ -7,7 +7,7 @@ Comprobación web de un texto con formato CSV y convertirlo a una tabla.
 Se toma como entrada un texto plano en formato CSV y la web lo transforma en un objeto tabla de html. 
 
 En la rama gh-pages se encuentra el proyecto sin el uso de ajax
-En la rama develop se encuentra el proyecto con el uso de ajax
+En la rama herokuServer se encuentra el proyecto con el uso de ajax
 
 ## Enlaces
 
