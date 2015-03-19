@@ -32,6 +32,6 @@ En la rama herokuServer se encuentra el proyecto con el uso de ajax
 ## Autores
 
 * [Juan Francisco Gonzáles Ramos](http://juanfgr.es/)
-* [Guillermo Rodríguez Pardo](http://wyllman.github.io/)
+* [Guillermo Rodríguez Pardo](https://wyllman.github.io/)
 
 
